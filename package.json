@@ -1,0 +1,10 @@
+{
+  "name": "cuida-da-tua-vida",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Carteira Oficial do Intrometido — LP de boletos (humor) com tracking de visitantes.",
+  "dependencies": {
+    "@neondatabase/serverless": "^0.10.4"
+  }
+}

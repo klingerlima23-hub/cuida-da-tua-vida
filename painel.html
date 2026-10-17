@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Painel — Quem andou bisbilhotando</title>
+<style>
+  :root{--bg:#0c0c0e;--card:#17171e;--ink:#f5f1e8;--muted:#9d978b;--gold:#e8b23a;--line:rgba(255,255,255,.09)}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,Segoe UI,Roboto,sans-serif;padding:24px}
+  h1{font-size:1.4rem;margin:0 0 4px}
+  .sub{color:var(--muted);font-size:.9rem;margin-bottom:18px}
+  .bar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:18px}
+  input,button{font:inherit;padding:10px 14px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
+  button{background:var(--gold);color:#231a05;font-weight:700;border:0;cursor:pointer}
+  .stats{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;min-width:130px}
+  .stat b{display:block;font-size:1.6rem}
+  .stat span{color:var(--muted);font-size:.8rem;text-transform:uppercase;letter-spacing:1px}
+  .wrap{overflow:auto;border:1px solid var(--line);border-radius:12px}
+  table{border-collapse:collapse;width:100%;font-size:12.5px;white-space:nowrap}
+  th,td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left}
+  th{position:sticky;top:0;background:#1d1d26;color:var(--gold);font-weight:600}
+  tr:hover td{background:rgba(255,255,255,.03)}
+  a{color:var(--gold)}
+  .muted{color:var(--muted)}
+  .err{color:#ff8e76;margin-top:10px}
+</style>
+</head>
+<body>
+  <h1>Quem andou bisbilhotando 👀</h1>
+  <div class="sub">Painel privado. Informe sua chave de acesso (ADMIN_KEY).</div>
+  <div class="bar">
+    <input id="key" type="password" placeholder="chave de acesso" style="min-width:220px">
+    <input id="limit" type="number" value="200" min="1" max="1000" style="width:100px" title="quantidade">
+    <button id="go">Carregar</button>
+    <span class="muted" id="hint">a chave fica só no seu navegador</span>
+  </div>
+  <div id="err" class="err"></div>
+  <div class="stats" id="stats"></div>
+  <div class="wrap"><table id="tb"><thead></thead><tbody></tbody></table></div>
+
+<script>
+  var $ = function(s){return document.querySelector(s)};
+  var keyEl=$("#key"), limEl=$("#limit");
+  try{ var saved=localStorage.getItem("cdv_admin"); if(saved) keyEl.value=saved; }catch(e){}
+
+  function fmt(d){ try{return new Date(d).toLocaleString("pt-BR",{timeZone:"America/Manaus"})}catch(e){return d} }
+  function esc(s){ return (s==null?"":String(s)).replace(/[&<>]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;"}[c]}) }
+
+  async function carregar(){
+    $("#err").textContent="";
+    var key=keyEl.value.trim(); if(!key){$("#err").textContent="Informe a chave.";return;}
+    try{ localStorage.setItem("cdv_admin",key); }catch(e){}
+    var url="/api/visitas?key="+encodeURIComponent(key)+"&limit="+encodeURIComponent(limEl.value||200);
+    var r;
+    try{ r=await fetch(url); }catch(e){ $("#err").textContent="Falha de rede."; return; }
+    if(r.status===401){ $("#err").textContent="Chave inválida."; return; }
+    var j=await r.json();
+    if(j.erro){ $("#err").textContent=j.erro; return; }
+
+    $("#stats").innerHTML =
+      stat(j.total,"visitas totais")+stat(j.ips_unicos,"IPs únicos")+stat(j.mostrando,"exibindo");
+
+    var cols=[["criado_em","Quando",fmt],["evento","Evento"],["ip","IP"],
+      ["cidade","Cidade"],["regiao","UF"],["pais","País"],
+      ["plataforma","SO"],["mobile","Mobile"],["tela","Tela"],["viewport","Viewport"],
+      ["idioma","Idioma"],["timezone_cli","Fuso"],["conexao","Conexão"],
+      ["referrer","Veio de"],["parcela","Parcela"],["user_agent","User-Agent"]];
+    $("#tb thead").innerHTML="<tr>"+cols.map(function(c){return "<th>"+c[1]+"</th>"}).join("")+"<th>Mapa</th></tr>";
+    $("#tb tbody").innerHTML=(j.visitas||[]).map(function(v){
+      var tds=cols.map(function(c){var val=v[c[0]]; if(c[2])val=c[2](val); return "<td>"+esc(val)+"</td>"}).join("");
+      var mapa = (v.latitude&&v.longitude)
+        ? '<td><a target="_blank" href="https://www.google.com/maps?q='+v.latitude+','+v.longitude+'">ver</a></td>'
+        : '<td class="muted">—</td>';
+      return "<tr>"+tds+mapa+"</tr>";
+    }).join("");
+  }
+  function stat(n,l){return '<div class="stat"><b>'+(n==null?"–":n)+'</b><span>'+l+'</span></div>'}
+
+  $("#go").addEventListener("click",carregar);
+  keyEl.addEventListener("keydown",function(e){if(e.key==="Enter")carregar()});
+</script>
+</body>
+</html>
