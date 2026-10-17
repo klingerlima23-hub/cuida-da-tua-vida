@@ -27,7 +27,7 @@
   if ((el = document.getElementById("card-val"))) el.textContent = validade();
 
   /* ---------- Cartão: tilt no pointer ---------- */
-  var card = document.querySelector(".credit");
+  var card = document.querySelector(".card-stage .credit");
   if (card && window.matchMedia("(pointer:fine)").matches) {
     var stage = card.parentElement;
     stage.addEventListener("pointermove", function (e) {

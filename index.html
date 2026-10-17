@@ -29,6 +29,7 @@
   </header>
 
   <main>
+    <!-- HERO -->
     <section class="hero wrap">
       <div class="hero-grid">
         <div>
@@ -41,74 +42,85 @@
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#faturas">Liberar meu crédito</a>
-            <a class="btn btn-soft" href="#regras">Como funciona</a>
+            <a class="btn btn-soft" href="#como">Como funciona</a>
           </div>
-          <div class="trust">
-            <span class="av"><span>🤨</span><span>🙄</span><span>👀</span></span>
-            seus vizinhos já estão de olho
-          </div>
+          <div class="trust"><span class="av"><span>🤨</span><span>🙄</span><span>👀</span></span> seus vizinhos já estão de olho</div>
         </div>
 
-        <div>
-          <div class="card-stage">
-            <div class="credit" aria-label="Cartão do intrometido">
-              <div class="top">
-                <span class="brandmk">Enxeridice</span>
-                <span class="tier">Cartão Platinum<br>Intrometido</span>
+        <div class="card-stage">
+          <div class="phone" aria-label="App do intrometido">
+            <div class="notch"></div>
+            <div class="screen">
+              <div class="scr-stat"><span>9:41</span><span class="r">📶 🔋</span></div>
+              <div class="scr-top">
+                <div class="ava">🕵️</div>
+                <div class="hi">Bem-vindo,<b>Intrometido Anônimo</b></div>
               </div>
-              <div class="chip"></div>
-              <div class="num" id="card-num">•••• •••• •••• 2026</div>
-              <div class="btm">
-                <div><div class="k">Titular</div><div class="v">INTROMETIDO ANÔNIMO</div></div>
-                <div><div class="k">Válido até</div><div class="v" id="card-val">--/--/----</div></div>
+              <div class="scr-body">
+                <div class="credit">
+                  <div class="top"><span class="brandmk">Enxeridice</span><span class="tier">Platinum<br>Intrometido</span></div>
+                  <div class="chip"></div>
+                  <div class="num" id="card-num">•••• •••• •••• 2026</div>
+                  <div class="btm">
+                    <div><div class="k">Titular</div><div class="v">ANÔNIMO</div></div>
+                    <div><div class="k">Válido até</div><div class="v" id="card-val">--/--/----</div></div>
+                  </div>
+                </div>
+                <div class="meter-card">
+                  <div class="mt"><span>Crédito de palpite</span><span><b>30</b> / 30 dias</span></div>
+                  <div class="track"><div class="fill"></div></div>
+                </div>
+                <div class="scr-sec">Suas faturas</div>
+                <div class="scr-row"><span class="ic">✓</span><div class="m"><b>1ª parcela</b><span>Paga · 15/10/2026</span></div><span class="pay" style="background:var(--mint-tint);color:var(--mint)">paga</span></div>
+                <div class="scr-row coral"><span class="ic">!</span><div class="m"><b>2ª parcela</b><span>R$ 18.271,43 · vence 16/11</span></div><span class="pay">Pagar</span></div>
               </div>
             </div>
           </div>
-          <div class="meter-card">
-            <div class="mt"><span>Crédito de palpite</span><span><b>30</b> / 30 dias</span></div>
-            <div class="track"><div class="fill"></div></div>
-          </div>
         </div>
       </div>
     </section>
 
-    <section id="regras" class="wrap">
-      <div class="sec-h">
-        <h2>As regras são claras. Diferente dos seus palpites.</h2>
-        <p>Sem letra miúda. Você paga, você opina — dentro da validade.</p>
+    <!-- STATS -->
+    <section class="sec-tint">
+      <div class="wrap stats">
+        <div class="stat reveal"><div class="n">30</div><div class="l">dias de crédito por parcela</div></div>
+        <div class="stat reveal"><div class="n">12</div><div class="l">dias antes = upgrade de crédito</div></div>
+        <div class="stat reveal"><div class="n">100%</div><div class="l">da sua curiosidade coberta</div></div>
+        <div class="stat reveal"><div class="n">0</div><div class="l">desculpas aceitas</div></div>
       </div>
-      <div class="bento">
-        <div class="tile big reveal">
-          <span class="badge">plano base</span>
-          <div class="ic" aria-hidden="true">🪪</div>
-          <h3>Pague 1 parcela, libere 30 dias</h3>
-          <p>Crédito ativado na hora. Pode comentar o garden, o cachorro e o gato à vontade — enquanto o cartão estiver válido.</p>
-        </div>
-        <div class="tile small reveal">
-          <span class="badge">upgrade</span>
-          <div class="ic mint" aria-hidden="true">⏱️</div>
-          <h3>12 dias antes</h3>
-          <p>Pague adiantado e ganhe dias extras. Mas olha o carimbo da 1ª parcela antes de se achar.</p>
-        </div>
-        <div class="tile wide reveal">
-          <div class="ic coral" aria-hidden="true">🔇</div>
-          <h3>Crédito vencido = silêncio</h3>
-          <p>Deixou expirar? Volta pro modo observador mudo. Palpite não autorizado é bloqueado. É contrato.</p>
-        </div>
-        <div class="tile wide reveal">
-          <div class="ic" aria-hidden="true">🌿</div>
-          <h3>Cobertura do plano</h3>
-          <p>Inclui: o garden, o cachorro, o gato, e qualquer coisa que entre no meu quintal. Sua opinião, a partir de R$ 18.271,43/mês.</p>
+    </section>
+
+    <!-- COMO FUNCIONA (sequência real: 3 passos) -->
+    <section id="como" class="wrap">
+      <div class="sec-h"><h2>Como funciona</h2><p>Três passos. Nenhum deles envolve fingir que não estava olhando.</p></div>
+      <div class="steps">
+        <div class="step reveal"><h3>Escolha uma fatura</h3><p>Role até as faturas, pegue a que couber no seu nível de curiosidade.</p></div>
+        <div class="step reveal"><h3>Pague ou copie o código</h3><p>Copie a linha digitável e pague no seu banco. Simples, rápido, definitivo.</p></div>
+        <div class="step reveal"><h3>Ganhe 30 dias de crédito</h3><p>Crédito de intrometido ativado. Agora pode opinar — dentro da validade.</p></div>
+      </div>
+    </section>
+
+    <!-- COBERTURA (benefícios, bento) -->
+    <section class="sec-tint-v">
+      <div class="wrap">
+        <div class="sec-h"><h2>O que o seu crédito cobre</h2><p>Sem letra miúda. Você paga, você opina — dentro da validade.</p></div>
+        <div class="bento">
+          <div class="tile big reveal"><span class="badge">plano base</span><div class="ic" aria-hidden="true">🪪</div>
+            <h3>Pague 1 parcela, libere 30 dias</h3><p>Crédito ativado na hora. Pode comentar o garden, o cachorro e o gato à vontade — enquanto o cartão estiver válido.</p></div>
+          <div class="tile small reveal"><span class="badge">upgrade</span><div class="ic mint" aria-hidden="true">⏱️</div>
+            <h3>12 dias antes</h3><p>Pague adiantado e ganhe dias extras. Mas olha o carimbo da 1ª parcela antes de se achar.</p></div>
+          <div class="tile wide reveal"><div class="ic coral" aria-hidden="true">🔇</div>
+            <h3>Crédito vencido = silêncio</h3><p>Deixou expirar? Volta pro modo observador mudo. Palpite não autorizado é bloqueado. É contrato.</p></div>
+          <div class="tile wide reveal"><div class="ic" aria-hidden="true">🌿</div>
+            <h3>Cobertura total do quintal</h3><p>Inclui: o garden, o cachorro, o gato, e qualquer coisa que entre no meu quintal. Sua opinião, a partir de R$ 18.271,43/mês.</p></div>
         </div>
       </div>
     </section>
 
+    <!-- FATURAS -->
     <section id="faturas" class="wrap">
       <div class="stmt-head">
-        <div class="sec-h">
-          <h2>As faturas</h2>
-          <p>São de verdade. Escolha uma, copie o código e demonstre seu amor pela minha vida alheia.</p>
-        </div>
+        <div class="sec-h"><h2>As faturas</h2><p>São de verdade. Escolha uma, copie o código e demonstre seu amor pela minha vida alheia.</p></div>
         <div class="stmt-total"><div class="k">7 parcelas</div><div class="v">R$ 127.900,01</div></div>
       </div>
       <div class="faturas">
@@ -118,20 +130,14 @@
             <div class="f-pc">1ª parcela<small>Bradesco · RZD Veículos</small></div>
             <span class="chip-st paid">paga</span>
           </div>
-          <div class="f-amt">
-            <span class="val">R$ 18.271,43</span>
-            <span class="due">vence em<b>15/10/2026</b></span>
-          </div>
+          <div class="f-amt"><span class="val">R$ 18.271,43</span><span class="due">vence em<b>15/10/2026</b></span></div>
           <div class="f-thumb" data-full="/assets/boletos/parcela_1_full.webp" data-parcela="1" role="button" tabindex="0" aria-label="Ver boleto 1">
             <img src="/assets/boletos/parcela_1.webp" alt="Boleto da 1ª parcela, vence 15/10/2026" loading="lazy" width="1200">
             <span class="z">ampliar boleto</span>
           </div>
-          <div class="f-code">
-            <div class="lbl">Linha digitável</div>
-            <div class="codebox">
-              <code>23791.99900 92600.005737 03006.245702 6 16000001827143</code>
-              <button class="cp" data-code="23791.99900 92600.005737 03006.245702 6 16000001827143" data-parcela="1" aria-label="Copiar código da parcela 1">copiar</button>
-            </div>
+          <div class="f-code"><div class="lbl">Linha digitável</div>
+            <div class="codebox"><code>23791.99900 92600.005737 03006.245702 6 16000001827143</code>
+              <button class="cp" data-code="23791.99900 92600.005737 03006.245702 6 16000001827143" data-parcela="1" aria-label="Copiar código da parcela 1">copiar</button></div>
             <div class="f-note">✓ Paguei 13 dias antes. Tá esperando o quê?</div>
           </div>
         </article>
@@ -141,20 +147,14 @@
             <div class="f-pc">2ª parcela<small>Bradesco · RZD Veículos</small></div>
             <span class="chip-st soon">próxima</span>
           </div>
-          <div class="f-amt">
-            <span class="val">R$ 18.271,43</span>
-            <span class="due">vence em<b>16/11/2026</b></span>
-          </div>
+          <div class="f-amt"><span class="val">R$ 18.271,43</span><span class="due">vence em<b>16/11/2026</b></span></div>
           <div class="f-thumb" data-full="/assets/boletos/parcela_2_full.webp" data-parcela="2" role="button" tabindex="0" aria-label="Ver boleto 2">
             <img src="/assets/boletos/parcela_2.webp" alt="Boleto da 2ª parcela, vence 16/11/2026" loading="lazy" width="1200">
             <span class="z">ampliar boleto</span>
           </div>
-          <div class="f-code">
-            <div class="lbl">Linha digitável</div>
-            <div class="codebox">
-              <code>23791.99900 92600.005737 04006.245700 9 16320001827143</code>
-              <button class="cp" data-code="23791.99900 92600.005737 04006.245700 9 16320001827143" data-parcela="2" aria-label="Copiar código da parcela 2">copiar</button>
-            </div>
+          <div class="f-code"><div class="lbl">Linha digitável</div>
+            <div class="codebox"><code>23791.99900 92600.005737 04006.245700 9 16320001827143</code>
+              <button class="cp" data-code="23791.99900 92600.005737 04006.245700 9 16320001827143" data-parcela="2" aria-label="Copiar código da parcela 2">copiar</button></div>
             
           </div>
         </article>
@@ -164,20 +164,14 @@
             <div class="f-pc">3ª parcela<small>Bradesco · RZD Veículos</small></div>
             <span class="chip-st open">em aberto</span>
           </div>
-          <div class="f-amt">
-            <span class="val">R$ 18.271,43</span>
-            <span class="due">vence em<b>14/12/2026</b></span>
-          </div>
+          <div class="f-amt"><span class="val">R$ 18.271,43</span><span class="due">vence em<b>14/12/2026</b></span></div>
           <div class="f-thumb" data-full="/assets/boletos/parcela_3_full.webp" data-parcela="3" role="button" tabindex="0" aria-label="Ver boleto 3">
             <img src="/assets/boletos/parcela_3.webp" alt="Boleto da 3ª parcela, vence 14/12/2026" loading="lazy" width="1200">
             <span class="z">ampliar boleto</span>
           </div>
-          <div class="f-code">
-            <div class="lbl">Linha digitável</div>
-            <div class="codebox">
-              <code>23791.99900 92600.005737 05006.245707 1 16600001827143</code>
-              <button class="cp" data-code="23791.99900 92600.005737 05006.245707 1 16600001827143" data-parcela="3" aria-label="Copiar código da parcela 3">copiar</button>
-            </div>
+          <div class="f-code"><div class="lbl">Linha digitável</div>
+            <div class="codebox"><code>23791.99900 92600.005737 05006.245707 1 16600001827143</code>
+              <button class="cp" data-code="23791.99900 92600.005737 05006.245707 1 16600001827143" data-parcela="3" aria-label="Copiar código da parcela 3">copiar</button></div>
             
           </div>
         </article>
@@ -187,20 +181,14 @@
             <div class="f-pc">4ª parcela<small>Bradesco · RZD Veículos</small></div>
             <span class="chip-st open">em aberto</span>
           </div>
-          <div class="f-amt">
-            <span class="val">R$ 18.271,43</span>
-            <span class="due">vence em<b>13/01/2027</b></span>
-          </div>
+          <div class="f-amt"><span class="val">R$ 18.271,43</span><span class="due">vence em<b>13/01/2027</b></span></div>
           <div class="f-thumb" data-full="/assets/boletos/parcela_4_full.webp" data-parcela="4" role="button" tabindex="0" aria-label="Ver boleto 4">
             <img src="/assets/boletos/parcela_4.webp" alt="Boleto da 4ª parcela, vence 13/01/2027" loading="lazy" width="1200">
             <span class="z">ampliar boleto</span>
           </div>
-          <div class="f-code">
-            <div class="lbl">Linha digitável</div>
-            <div class="codebox">
-              <code>23791.99900 92600.005737 06006.245705 1 16900001827143</code>
-              <button class="cp" data-code="23791.99900 92600.005737 06006.245705 1 16900001827143" data-parcela="4" aria-label="Copiar código da parcela 4">copiar</button>
-            </div>
+          <div class="f-code"><div class="lbl">Linha digitável</div>
+            <div class="codebox"><code>23791.99900 92600.005737 06006.245705 1 16900001827143</code>
+              <button class="cp" data-code="23791.99900 92600.005737 06006.245705 1 16900001827143" data-parcela="4" aria-label="Copiar código da parcela 4">copiar</button></div>
             
           </div>
         </article>
@@ -210,20 +198,14 @@
             <div class="f-pc">5ª parcela<small>Bradesco · RZD Veículos</small></div>
             <span class="chip-st open">em aberto</span>
           </div>
-          <div class="f-amt">
-            <span class="val">R$ 18.271,43</span>
-            <span class="due">vence em<b>12/02/2027</b></span>
-          </div>
+          <div class="f-amt"><span class="val">R$ 18.271,43</span><span class="due">vence em<b>12/02/2027</b></span></div>
           <div class="f-thumb" data-full="/assets/boletos/parcela_5_full.webp" data-parcela="5" role="button" tabindex="0" aria-label="Ver boleto 5">
             <img src="/assets/boletos/parcela_5.webp" alt="Boleto da 5ª parcela, vence 12/02/2027" loading="lazy" width="1200">
             <span class="z">ampliar boleto</span>
           </div>
-          <div class="f-code">
-            <div class="lbl">Linha digitável</div>
-            <div class="codebox">
-              <code>23791.99900 92600.005737 07006.245703 1 17200001827143</code>
-              <button class="cp" data-code="23791.99900 92600.005737 07006.245703 1 17200001827143" data-parcela="5" aria-label="Copiar código da parcela 5">copiar</button>
-            </div>
+          <div class="f-code"><div class="lbl">Linha digitável</div>
+            <div class="codebox"><code>23791.99900 92600.005737 07006.245703 1 17200001827143</code>
+              <button class="cp" data-code="23791.99900 92600.005737 07006.245703 1 17200001827143" data-parcela="5" aria-label="Copiar código da parcela 5">copiar</button></div>
             
           </div>
         </article>
@@ -233,20 +215,14 @@
             <div class="f-pc">6ª parcela<small>Bradesco · RZD Veículos</small></div>
             <span class="chip-st open">em aberto</span>
           </div>
-          <div class="f-amt">
-            <span class="val">R$ 18.271,43</span>
-            <span class="due">vence em<b>15/03/2027</b></span>
-          </div>
+          <div class="f-amt"><span class="val">R$ 18.271,43</span><span class="due">vence em<b>15/03/2027</b></span></div>
           <div class="f-thumb" data-full="/assets/boletos/parcela_6_full.webp" data-parcela="6" role="button" tabindex="0" aria-label="Ver boleto 6">
             <img src="/assets/boletos/parcela_6.webp" alt="Boleto da 6ª parcela, vence 15/03/2027" loading="lazy" width="1200">
             <span class="z">ampliar boleto</span>
           </div>
-          <div class="f-code">
-            <div class="lbl">Linha digitável</div>
-            <div class="codebox">
-              <code>23791.99900 92600.005737 08006.245701 9 17510001827143</code>
-              <button class="cp" data-code="23791.99900 92600.005737 08006.245701 9 17510001827143" data-parcela="6" aria-label="Copiar código da parcela 6">copiar</button>
-            </div>
+          <div class="f-code"><div class="lbl">Linha digitável</div>
+            <div class="codebox"><code>23791.99900 92600.005737 08006.245701 9 17510001827143</code>
+              <button class="cp" data-code="23791.99900 92600.005737 08006.245701 9 17510001827143" data-parcela="6" aria-label="Copiar código da parcela 6">copiar</button></div>
             
           </div>
         </article>
@@ -256,46 +232,62 @@
             <div class="f-pc">7ª parcela<small>Bradesco · RZD Veículos</small></div>
             <span class="chip-st open">em aberto</span>
           </div>
-          <div class="f-amt">
-            <span class="val">R$ 18.271,43</span>
-            <span class="due">vence em<b>13/04/2027</b></span>
-          </div>
+          <div class="f-amt"><span class="val">R$ 18.271,43</span><span class="due">vence em<b>13/04/2027</b></span></div>
           <div class="f-thumb" data-full="/assets/boletos/parcela_7_full.webp" data-parcela="7" role="button" tabindex="0" aria-label="Ver boleto 7">
             <img src="/assets/boletos/parcela_7.webp" alt="Boleto da 7ª parcela, vence 13/04/2027" loading="lazy" width="1200">
             <span class="z">ampliar boleto</span>
           </div>
-          <div class="f-code">
-            <div class="lbl">Linha digitável</div>
-            <div class="codebox">
-              <code>23791.99900 92600.005737 09006.245709 8 17800001827142</code>
-              <button class="cp" data-code="23791.99900 92600.005737 09006.245709 8 17800001827142" data-parcela="7" aria-label="Copiar código da parcela 7">copiar</button>
-            </div>
+          <div class="f-code"><div class="lbl">Linha digitável</div>
+            <div class="codebox"><code>23791.99900 92600.005737 09006.245709 8 17800001827142</code>
+              <button class="cp" data-code="23791.99900 92600.005737 09006.245709 8 17800001827142" data-parcela="7" aria-label="Copiar código da parcela 7">copiar</button></div>
             
           </div>
         </article>
       </div>
     </section>
 
-    <section class="closing wrap">
-      <p class="q">Quer mais dias de crédito? Faça melhor que eu.</p>
-      <p class="sub">Pague as faturas com pelo menos 12 dias antes do vencimento. Consegue?</p>
-      <a class="btn btn-primary" href="#faturas">Aceitar o desafio</a>
+    <!-- FAQ -->
+    <section class="sec-tint">
+      <div class="wrap">
+        <div class="sec-h" style="margin-inline:auto;text-align:center"><h2>Perguntas de intrometido</h2><p>As dúvidas que todo curioso tem antes de assinar.</p></div>
+        <div class="faq">
+          <details><summary>Posso opinar sem pagar?</summary><div class="a">Pode — baixinho, sozinho, no travesseiro. Em público, no portão ou no grupo do prédio, só com crédito ativo.</div></details>
+          <details><summary>O crédito cobre o cachorro E o gato?</summary><div class="a">Ambos. Inclusive quando estão no garden ao mesmo tempo. É o plano completo, sem coparticipação.</div></details>
+          <details><summary>O que acontece quando meu crédito vence?</summary><div class="a">Você volta ao silêncio contemplativo. Para reativar, é só pagar outra parcela e renovar por mais 30 dias.</div></details>
+          <details><summary>Esses boletos são de verdade?</summary><div class="a">São. Pode conferir a linha digitável. Pagar é totalmente opcional — mas profundamente apreciado.</div></details>
+          <details><summary>Como consigo mais dias de crédito?</summary><div class="a">Pagando com pelo menos 12 dias de antecedência. Eu paguei 13. A régua tá alta.</div></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BAND -->
+    <section class="wrap">
+      <div class="cta-band reveal">
+        <h2>Pronto pra opinar com responsabilidade?</h2>
+        <p>Escolha uma fatura, pague e libere 30 dias de crédito de intrometido. Quer mais dias? Faça melhor que eu: pague 12 dias antes.</p>
+        <a class="btn" href="#faturas">Liberar meu crédito</a>
+      </div>
     </section>
   </main>
 
-  <footer class="wrap">
-    <div class="fr">
-      <div>Banco da Enxeridice · agência do bem-querer alheio</div>
-      <div class="disc">Página de humor. Os boletos têm os dados pessoais do titular censurados; permanecem visíveis apenas os dados da empresa recebedora. Pagar qualquer boleto é opcional — e muito apreciado.</div>
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap foot">
+      <div>
+        <div class="brand"><span class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="10" cy="10" r="6.5" stroke="currentColor" stroke-width="2.4"/><path d="M15 15l5 5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg></span>Banco da Enxeridice</div>
+        <p class="about">A primeira agência de crédito para quem não resiste a dar palpite na vida alheia.</p>
+      </div>
+      <div><h4>Produto</h4><a href="#como">Como funciona</a><a href="#faturas">Faturas</a><a href="#faturas">Liberar crédito</a></div>
+      <div><h4>Mais</h4><a href="#como">Regras do crédito</a><a href="#faturas">Linha digitável</a><a href="#">Suporte ao intrometido</a></div>
+    </div>
+    <div class="wrap foot-base">
+      Página de humor. Os boletos têm os dados pessoais do titular censurados; permanecem visíveis apenas os dados da empresa recebedora. Pagar qualquer boleto é opcional — e muito apreciado.
     </div>
   </footer>
 
   <div class="dock"><a class="btn btn-primary" href="#faturas">Liberar meu crédito de intrometido</a></div>
 
-  <div class="lb" id="lightbox" aria-hidden="true">
-    <button class="x" aria-label="Fechar">×</button>
-    <img src="" alt="Boleto ampliado">
-  </div>
+  <div class="lb" id="lightbox" aria-hidden="true"><button class="x" aria-label="Fechar">×</button><img src="" alt="Boleto ampliado"></div>
 
   <div class="consent" id="consent" aria-live="polite">
     <p>Este site registra dados de acesso (aparelho, origem e localização aproximada) para fins estatísticos.</p>
