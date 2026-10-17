@@ -207,7 +207,9 @@ footer .disc{max-width:52ch;line-height:1.6}
 /* ---------- Mobile sticky CTA ---------- */
 .dock{position:fixed;left:0;right:0;bottom:0;z-index:45;display:none;
   padding:12px 16px calc(12px + env(safe-area-inset-bottom));
-  background:color-mix(in srgb,var(--paper) 85%,transparent);backdrop-filter:blur(12px);border-top:1px solid var(--line)}
+  background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(12px);border-top:1px solid var(--line);
+  transform:translateY(130%);transition:transform .28s cubic-bezier(.22,1,.36,1)}
+.dock.show{transform:translateY(0)}
 .dock .btn{width:100%;justify-content:center}
 
 /* ---------- Consent (off by default) ---------- */
@@ -241,16 +243,22 @@ footer .disc{max-width:52ch;line-height:1.6}
 
 /* ---------- Responsive ---------- */
 @media (max-width:860px){
-  .hero-grid{grid-template-columns:1fr}
-  .card-stage{order:-1}
+  .hero{padding-top:clamp(28px,6vw,48px)}
+  .hero-grid{grid-template-columns:1fr;gap:4px}
+  h1{max-width:100%}
+  .lead{max-width:100%}
+  .card-stage{margin:28px auto 2px}
   .credit{width:min(360px,100%)}
+  .meter-card{margin-top:16px}
   .bento{grid-template-columns:repeat(2,1fr)}
   .tile.big,.tile.small,.tile.wide{grid-column:span 2}
   .appbar .cta-mini{display:none}
 }
 @media (max-width:560px){
   .dock{display:block}
-  footer{padding-bottom:110px}
+  .hero{padding-bottom:18px}
+  .hero-actions .btn{flex:1;justify-content:center}
+  footer{padding-bottom:120px}
   .pill .txt{display:none}
   .stmt-total{width:100%}
 }

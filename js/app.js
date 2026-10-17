@@ -154,5 +154,16 @@
     }
   } else { iniciar(); }
 
+  /* Dock (CTA fixo mobile): aparece só depois de rolar o hero */
+  var dock = document.querySelector(".dock");
+  if (dock) {
+    var toggleDock = function () {
+      if (window.pageYOffset > 440) dock.classList.add("show");
+      else dock.classList.remove("show");
+    };
+    window.addEventListener("scroll", toggleDock, { passive: true });
+    toggleDock();
+  }
+
   window.__cdvTrack = track;
 })();
